@@ -17,8 +17,6 @@ AFRAME.registerComponent('orbit', {
       x: this.el.object3D.position.x,
       z: this.el.object3D.position.z,
     };
-    this.x = this.el.object3D.position.x,
-    this.z = this.el.object3D.position.z,
     this.angle = 1;
     this.getAngleRadians = function() {
         return this.angle * (Math.PI / 180);
@@ -28,8 +26,6 @@ AFRAME.registerComponent('orbit', {
     if (this.timeElapsed > this.updateDelta) {
       this.timeElapsed = 0;
       this.calculateNextPoint();
-      this.el.object3D.position.x = this.x;
-      this.el.object3D.position.z = this.z;
     }
     this.timeElapsed += timeDelta;
   },
@@ -37,8 +33,8 @@ AFRAME.registerComponent('orbit', {
     if (this.angle == 360) {
       this.angle = 1;
     }
-    this.x = this.origin.x + this.r * Math.cos(this.getAngleRadians());
-    this.z = this.origin.z + this.r * Math.sin(this.getAngleRadians());
+    this.el.object3D.position.x = this.origin.x + this.r * Math.cos(this.getAngleRadians());
+    this.el.object3D.position.z = this.origin.z + this.r * Math.sin(this.getAngleRadians());
     this.angle++;
   },
 });

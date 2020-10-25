@@ -1,0 +1,23 @@
+{
+  "name": "orbit",
+  "version": "1.0.0",
+  "description": "Orbit is an A-Frame component that allows an entity to orbit around a fixed point.",
+  "main": "orbit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-schroeder-dev/aframe-orbit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-schroeder-dev/aframe-orbit/issues"
+  },
+  "homepage": "https://github.com/daniel-schroeder-dev/aframe-orbit#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
