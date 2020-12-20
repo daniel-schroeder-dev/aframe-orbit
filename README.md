@@ -17,6 +17,7 @@ Include the component file in the head of your HTML document:
   orbit="
   	radius: 10; 
   	updateDelta: 25;
+  	speed: 1;
   "
 >
 </a-entity>
@@ -28,6 +29,7 @@ Include the component file in the head of your HTML document:
 |--------------------|---------|-------------|
 | **radius**         | 10      | The radius of the circle that the orbit encompasses|
 | **updateDelta**    | 0       | The total time between each point calculation (in milliseconds)|
+| **speed**          | 1       | The speed of the orbit|
 
 ## Example
 

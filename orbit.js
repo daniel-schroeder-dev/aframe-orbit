@@ -8,10 +8,15 @@ AFRAME.registerComponent('orbit', {
       type: 'number',
       default: 0,
     },
+    speed: {
+      type: 'number',
+      default: 1,
+    },
   },
   init: function () {
     this.timeElapsed = 0;
     this.updateDelta = this.data.updateDelta;
+    this.speed = this.data.speed;
     this.r = this.data.radius;
     this.origin = {
       x: this.el.object3D.position.x,
@@ -35,6 +40,6 @@ AFRAME.registerComponent('orbit', {
     }
     this.el.object3D.position.x = this.origin.x + this.r * Math.cos(this.getAngleRadians());
     this.el.object3D.position.z = this.origin.z + this.r * Math.sin(this.getAngleRadians());
-    this.angle++;
+    this.angle += this.speed;
   },
 });
